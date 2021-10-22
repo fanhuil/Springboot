@@ -1,7 +1,8 @@
 package com.itheima.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
 
 /**
  * @author fanhuilin
@@ -9,10 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@CrossOrigin
 public class HelloController {
 
     @RequestMapping("/hello")
-    public String hello(){
+    public String hello() {
         return "hello spring boot";
+    }
+
+    @PostMapping ("/test")
+    public HashMap testGetParam(@RequestBody String content) {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("content", content);
+        return map;
+
     }
 }
