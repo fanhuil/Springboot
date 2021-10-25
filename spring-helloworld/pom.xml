@@ -8,7 +8,7 @@
     <artifactId>spring-helloworld</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- spring工程需要继承的父工程 -->
+    <!-- springboot工程需要继承的父工程 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -23,6 +23,7 @@
         </dependency>
     </dependencies>
 
+<!--    部署springboot的插件，只有当加了这个插件，当运行java -jar xxx才能正常启动-->
     <build>
         <plugins>
             <plugin>

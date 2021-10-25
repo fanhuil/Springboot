@@ -10,10 +10,11 @@ import java.util.HashMap;
  */
 
 @RestController
-@CrossOrigin
+@CrossOrigin // 跨域
+@RequestMapping("/hello")
 public class HelloController {
 
-    @RequestMapping("/hello")
+    @RequestMapping("/world")
     public String hello() {
         return "hello spring boot";
     }
