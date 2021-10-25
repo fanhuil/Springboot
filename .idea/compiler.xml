@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-redis" />
         <module name="springboot-config" />
+        <module name="configuration_inject" />
         <module name="spring-helloworld" />
         <module name="springboot-init" />
         <module name="springboot-test" />
@@ -16,6 +17,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="04_configuration_inject" target="1.5" />
+      <module name="configuration_inject" target="1.8" />
       <module name="spring-helloworld" target="1.8" />
       <module name="spring-init" target="1.8" />
       <module name="springboot-condition" target="1.8" />
@@ -28,6 +31,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="configuration_inject" options="-parameters" />
       <module name="spring-helloworld" options="-parameters" />
       <module name="spring-init" options="-parameters" />
       <module name="springboot-condition" options="-parameters" />
